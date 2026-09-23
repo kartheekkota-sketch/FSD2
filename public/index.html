@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Users SPA</title>
+
+        <style>
+            body{
+                font-family: Arial,  sans-serif;
+                max-width: 900px;
+                margin: 30px auto;
+                padding: 0 10px;
+            }
+            input,
+            button {
+                padding: 6px;
+                margin: 4px;
+            }
+            table {
+                width: 100%;
+                border-collapse: collapse;
+                margin-top: 12px;
+            }
+
+            th,
+            td{
+                border : 1px solid #ddd;
+                padding: 8px;
+                text-align: left;
+            }
+
+            tr:nth-child(even){
+                background: #f9f9f9;
+            }
+
+            .small {
+                font-size: 0.9em;
+                color: #666;
+                margin-top:10px;
+            }
+        </style>
+    </head>
+
+<body>
+
+    <h1>Users - Single Page Application </h1>
+
+    <form id="userForm">
+        <input
+          type="text"
+          id="name"
+          placeholder="Enter Name"
+          required>
+        <input
+          type="email"
+          id="email"
+          placeholder="Enter Email"
+          required>
+        
+        <button type="submit">Add</button>
+
+        <button
+           type="button"
+           id="cancelEdit"
+           style="display: none">cancel Edit</button>
+
+    </form>
+<div id="msg" class="small"></div>
+
+<table>
+
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+
+    <tbody id="usersBody"></tbody>
+</table>
+
+<script src="app.js"></script>
+</body>
+</html>
